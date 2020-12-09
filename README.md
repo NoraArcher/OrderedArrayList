@@ -2,7 +2,7 @@
 
 ## Progress
 - [x] NoNullArrayList Constructors
-- [x] NoNullArrayList [Methods](https://www.youtube.com/watch?v=l5aZJBLAu1E)
+- [x] NoNullArrayList [Methods](https://www.youtube.com./watch?v=QXJL6b6wnHw)
 - [ ] NoNullArrayList Exceptions
 - [x] OrderedArrayList Constructors
 - [x] OrderedArrayList Methods
