@@ -23,10 +23,22 @@ public class OrderedArrayList< T extends Comparable<T> > extends NoNullArrayList
 
   public void add(int index, T value) {
     index = 0; //thees = {1, 3, 4} value = 5
-    while (value.compareTo( thees.get(index) ) > 0 && index < thees.size()) {
-      index++;
+    while ( value.compareTo( thees.get(index) ) > 0 && (index < thees.size() || 0 == thees.size()) ) {
+     index++;
     }
     thees.add(index, value);
+  }
+
+  public String toString() {
+    return (""+thees);
+  }
+
+  public T get(int index) {
+    return thees.get(index);
+  }
+
+  public int size() {
+    return thees.size();
   }
 
 

@@ -37,6 +37,21 @@ public class NoNullArrayList<T> extends ArrayList<T> {
     }
   }
 
+  public String toString() {
+    return (""+thees);
+  }
+
+  public T get(int index) {
+    return thees.get(index);
+  }
+
+  public int size() {
+    return thees.size();
+  }
+
+  
+
+
 
 
 }
