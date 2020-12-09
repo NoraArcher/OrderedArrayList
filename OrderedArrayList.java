@@ -1,46 +1,41 @@
 public class OrderedArrayList< T extends Comparable<T> > extends NoNullArrayList<T> {
 
-  private NoNullArrayList<T> thees;
-
   public OrderedArrayList() {
-    thees = new NoNullArrayList<T>();
+    super();
   }
 
   public OrderedArrayList(int startingCapacity) {
-    thees = new NoNullArrayList<T>(startingCapacity);
+    super(startingCapacity);
   }
 
   public T set(int index, T value) {
-    thees.remove(index);
-    thees.add(0, value);
+    remove(index);
+    add(0, value);
     return value;
   }
 
   public boolean add(T value) {
-    thees.add(0, value);
+    add(0, value);
     return true;
   }
 
   public void add(int index, T value) {
-    index = 0; //thees = {1, 3, 4} value = 5
-    while ( value.compareTo( thees.get(index) ) > 0 && (index < thees.size() || 0 == thees.size()) ) {
-     index++;
+    index = 0;
+    for (int i = 0; i < size(); i++) {
+      if (  value.compareTo( get(i) ) > 0  ) index = i+1;
     }
-    thees.add(index, value);
+    super.add(index, value);
+    // if (size() == 0) {
+    //   super.add(0, value);
+    // } else {
+    //   index = 0; //thees = {1, 3, 4} value = 5
+    //   while ( value.compareTo( get(index) ) > 0 && index < size() - 1 ) {
+    //     index++;
+    //     //if (index == size() - 1 && value.compareTo( get(index) ) > 0 ) index++;
+    //   }
+    //   super.add(index, value);
+    // }
   }
-
-  public String toString() {
-    return (""+thees);
-  }
-
-  public T get(int index) {
-    return thees.get(index);
-  }
-
-  public int size() {
-    return thees.size();
-  }
-
 
 
 

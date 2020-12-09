@@ -1,21 +1,19 @@
 import java.util.ArrayList;
 public class NoNullArrayList<T> extends ArrayList<T> {
 
-  private ArrayList<T> thees;
-
   public NoNullArrayList() {
-    thees = new ArrayList<T>();
+    super();
   }
 
   public NoNullArrayList(int startingCapacity) {
-    thees = new ArrayList<T>(startingCapacity);
+    super(startingCapacity);
   }
 
   public T set(int index, T value) throws IllegalArgumentException {
     if (value.equals(null)) {
       throw new IllegalArgumentException();
     } else {
-      thees.set(index, value);
+      super.set(index, value);
     }
     return value;
   }
@@ -24,7 +22,7 @@ public class NoNullArrayList<T> extends ArrayList<T> {
     if (value.equals(null)) {
       throw new IllegalArgumentException();
     } else {
-      thees.add(value);
+      super.add(value);
     }
     return true;
   }
@@ -33,24 +31,9 @@ public class NoNullArrayList<T> extends ArrayList<T> {
     if (value.equals(null)) {
       throw new IllegalArgumentException();
     } else {
-      thees.add(index, value);
+      super.add(index, value);
     }
   }
-
-  public String toString() {
-    return (""+thees);
-  }
-
-  public T get(int index) {
-    return thees.get(index);
-  }
-
-  public int size() {
-    return thees.size();
-  }
-
-  
-
 
 
 
