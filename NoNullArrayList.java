@@ -1,35 +1,42 @@
+import java.util.ArrayList;
 public class NoNullArrayList<T> extends ArrayList<T> {
 
+  private ArrayList<T> thees;
+
   public NoNullArrayList() {
-    this = new ArrayList<T>();
+    thees = new ArrayList<T>();
   }
 
   public NoNullArrayList(int startingCapacity) {
-    this = new ArrayList<T>(startingCapacity);
+    thees = new ArrayList<T>(startingCapacity);
   }
 
-  public void set(int index, T value) throws IllegalArgumentException {
+  public T set(int index, T value) throws IllegalArgumentException {
     if (value.equals(null)) {
       throw new IllegalArgumentException();
     } else {
-      this.set(index, value);
+      thees.set(index, value);
     }
+    return value;
   }
 
-  public void add(T value) throws IllegalArgumentException {
+  public boolean add(T value) throws IllegalArgumentException {
     if (value.equals(null)) {
       throw new IllegalArgumentException();
     } else {
-      this.add(value);
+      thees.add(value);
     }
+    return true;
   }
 
   public void add(int index, T value) throws IllegalArgumentException {
     if (value.equals(null)) {
       throw new IllegalArgumentException();
     } else {
-      this.add(index, value);
+      thees.add(index, value);
     }
   }
+
+
 
 }
