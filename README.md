@@ -5,7 +5,7 @@
 - [x] NoNullArrayList [Methods](https://www.youtube.com/watch?v=l5aZJBLAu1E)
 - [ ] NoNullArrayList Exceptions
 - [x] OrderedArrayList Constructors
-- [ ] OrderedArrayList Methods (set is untested)
+- [x] OrderedArrayList Methods
 - [x] OrderedArrayList Sorting
 - [ ] OrderedArrayList Exceptions
 - [ ] Thorough/Randomized Testing

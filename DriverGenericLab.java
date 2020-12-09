@@ -21,9 +21,9 @@ public class DriverGenericLab {
       a.add(2, null);
       a.set(5, null);
     } catch (IllegalArgumentException e) {
-      System.out.println("no nulls inserted:\n"+a);
+      System.out.println("No nulls inserted, perfect");
     } catch (RuntimeException e) {
-      System.out.println("Not throwing the right exception:\n"+a);
+      System.out.println("Not throwing the right exception");
     }
     ArrayList<Integer> c = new OrderedArrayList<Integer>();
     ArrayList<Integer> d = new OrderedArrayList<Integer>(81);
@@ -34,7 +34,17 @@ public class DriverGenericLab {
     x = 10;  y = 16;   z = 6;
     d.add(x);  d.add(y); d.add(z);
     System.out.println(d);
-
+    x = 13; d.set(2, x);  y = 3;  d.add(5, y);
+    System.out.println(d);
+    try {
+      d.add(null);
+      d.add(2, null);
+      d.set(5, null);
+    } catch (IllegalArgumentException e) {
+      System.out.println("no nulls inserted, great");
+    } catch (RuntimeException e) {
+      System.out.println("Not throwing the right exception");
+    }
   }
 
 
