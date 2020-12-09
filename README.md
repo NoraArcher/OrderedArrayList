@@ -1,7 +1,7 @@
 # OrderedArrayList
 
-Breakout room discussion:
+## Breakout room discussion: 
 
-Misconceptions I had:
+Misconceptions I had: I at first had no idea what you meant by using startingCapacity
 
 Alternate ideas from my group:
