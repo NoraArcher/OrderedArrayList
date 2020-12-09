@@ -27,4 +27,5 @@ Wow I had the completely wrong approach, I had forgotten about super and I was u
 **no alternate ideas as of yet** :octocat:
 
 ## I just like to mess around with Markdown
-![no fun](bandicoot.jpg)
+![no fun, I can't get this image to work](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_2fK04BdwLjEd6LW1cIJD7L-TG9wYbk8i0g&usqp=CAU)
+![what about this](https://www.australianwildlife.org/wp-content/uploads/2019/03/Northern-Brown-Bandicoot-%C2%A9-AWC.png)
