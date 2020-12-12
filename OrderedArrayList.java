@@ -9,9 +9,10 @@ public class OrderedArrayList< T extends Comparable<T> > extends NoNullArrayList
   }
 
   public T set(int index, T value) {
+    T toReturn = get(index);
     remove(index);
     add(0, value);
-    return value;
+    return toReturn;
   }
 
   public boolean add(T value) {
@@ -25,16 +26,6 @@ public class OrderedArrayList< T extends Comparable<T> > extends NoNullArrayList
       if (  value.compareTo( get(i) ) > 0  ) index = i+1;
     }
     super.add(index, value);
-    // if (size() == 0) {
-    //   super.add(0, value);
-    // } else {
-    //   index = 0; //thees = {1, 3, 4} value = 5
-    //   while ( value.compareTo( get(index) ) > 0 && index < size() - 1 ) {
-    //     index++;
-    //     //if (index == size() - 1 && value.compareTo( get(index) ) > 0 ) index++;
-    //   }
-    //   super.add(index, value);
-    // }
   }
 
 

@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-//import RunTimeException;
 public class DriverGenericLab {
 
   public static void main(String[] args) {
@@ -38,8 +37,8 @@ public class DriverGenericLab {
     System.out.println(d);
     try {
       d.add(null);
-      d.add(2, null);
-      d.set(5, null);
+      //d.add(2, null);
+      //d.set(5, null);
     } catch (IllegalArgumentException e) {
       System.out.println("no nulls inserted, great");
     } catch (RuntimeException e) {
