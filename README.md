@@ -7,7 +7,7 @@
 - [x] OrderedArrayList Constructors
 - [x] OrderedArrayList Methods
 - [x] OrderedArrayList Sorting
-- [ ] OrderedArrayList Exceptions
+- [x] OrderedArrayList Exceptions
 - [ ] Thorough/Randomized Testing
 
 ## Breakout room discussion:

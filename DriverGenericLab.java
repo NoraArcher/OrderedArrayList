@@ -2,10 +2,6 @@ import java.util.ArrayList;
 public class DriverGenericLab {
 
   public static void main(String[] args) {
-    ArrayList<String> p = new ArrayList<String>(10);
-    System.out.println("systems check:");
-    p.add("Hallo");   p.add(" und Auf Wiedersehen");
-    System.out.println(p.get(0)+p.get(1));
     ArrayList<String> a = new NoNullArrayList<String>();
     ArrayList<String> b = new NoNullArrayList<String>(8);
     System.out.println("\nNoNullArrayList tests");
@@ -24,9 +20,11 @@ public class DriverGenericLab {
     } catch (RuntimeException e) {
       System.out.println("Not throwing the right exception");
     }
-    ArrayList<Integer> c = new OrderedArrayList<Integer>();
+
+    ArrayList<Double> c = new OrderedArrayList<Double>();
     ArrayList<Integer> d = new OrderedArrayList<Integer>(81);
     System.out.println("\nOrderedArrayList tests");
+
     Integer x = 9;  Integer y = 12;   Integer z = 14;
     d.add(x);  d.add(y); d.add(z);
     System.out.println(d);
@@ -37,13 +35,32 @@ public class DriverGenericLab {
     System.out.println(d);
     try {
       d.add(null);
-      //d.add(2, null);
-      //d.set(5, null);
+      d.add(2, null);
+      d.set(5, null);
     } catch (IllegalArgumentException e) {
       System.out.println("no nulls inserted, great");
     } catch (RuntimeException e) {
-      System.out.println("Not throwing the right exception");
+      System.out.println("Not throwing the right exception"+d);
     }
+
+    Double p = -60.67;  Double q = -74.0;   Double r = 80.3;
+    c.add(p);  c.add(q); c.add(r);
+    System.out.println(c);
+    p = -580.09;  q = -60.66;   r = 5.6890;
+    c.add(p);  c.add(q); c.add(r);
+    System.out.println(c);
+    p = -72.6; c.set(2, p);  q = 80.34;  c.add(5, q);
+    System.out.println(c);
+    try {
+      c.add(null);
+      c.add(2, null);
+      c.set(5, null);
+    } catch (IllegalArgumentException e) {
+      System.out.println("no nulls inserted, great");
+    } catch (RuntimeException e) {
+      System.out.println("Not throwing the right exception"+c);
+    }
+
   }
 
 
